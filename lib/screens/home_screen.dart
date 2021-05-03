@@ -64,36 +64,106 @@ class HomeState extends State<Home_screen> {
               ],
             ),
           ),
-          /*_cardItem(1),
-          _cardItem(2),
-          _cardItem(3),
-          _cardItem(4),*/
+          _cardItem("blog1","What is C Programming","4 min","by Akshat Mehta"),
+          _cardItem("blog2","Use of C Programming","15 min","by Rutuja Kumbhar"),
+          _cardItem("blog3","Start with C Programming","3 min","by Aayush Joshi"),
+          _cardItem("blog4","How to use Sarvakaraum","6 min","by Harshith Shetty"),
         ],
       ),
     );
   }
-//comments
- // _cardItem()
+  _cardItem(image, title_text,read_time,author) {
+    return Padding(padding:EdgeInsets.all(16.0),child:Row(
+      children: <Widget>[
+        Container(
+          width: 100.0,
+          height: 100.0,
+          decoration: BoxDecoration(
+            image: DecorationImage(image: AssetImage("assets/$image.png"),
+            fit: BoxFit.cover,
+            ),
+            borderRadius: BorderRadius.circular(20.0)
+          )
+        ),
+        SizedBox(width: 20.0),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              title_text,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 22.0
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              read_time,
+              style: TextStyle(
+                color: Colors.red,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height:10.0),
+            Text(
+              author,
+              style:
+                TextStyle(fontWeight:FontWeight.bold, color: Colors.grey),
+            )
+          ]
+        )
+      ],
+    )
+    );
+  }
+
   _gridItem(funct,text) {
     return Column(
-      children: <Widget>[
-    GestureDetector(
-        onTap ()  Home();
-        child: CircleAvatar(
-          backgroundColor: Colors.brown.shade800,
-
-        ),
-        child: SizedBox(height: 10.0),
-        child: Text(
-          text,
-          style: TextStyle(
-            fontSize: 11.0,
+        children: <Widget>[
+          MaterialButton(
+            onPressed: () {
+              debugPrint(text);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                  builder: (context) => Home(),   //Material button function
+              ),
+              );
+            },
+            shape: const StadiumBorder(),
+            textColor: Colors.black,
+            color: Colors.blue[300],
+            splashColor: Colors.blue[900],
+            disabledColor: Colors.grey,
+            disabledTextColor: Colors.white,
+            child: Text(text),
           ),
-        )
-    ),
-      ]
+          /*CircleAvatar(
+            child: Text(text),
+            foregroundColor: Colors.red,
+            backgroundColor: Colors.green,
 
+          ),
+          InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Home_screen()
+                  ),
+                );
+              },
+            ),
+          SizedBox(height: 10.0),
+          Text(
+            text,
+            style: TextStyle(
+              fontSize: 11.0,
+            ),
+          )*/
+        ]
     );
+  }
 
   _top() {
     return Container(
@@ -113,6 +183,15 @@ class HomeState extends State<Home_screen> {
                 children: <Widget>[
                   CircleAvatar(
                     backgroundImage: AssetImage("assets\images\profile_face_purple_500px.png"),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      debugPrint("Starred Me!");
+                    },
+                    color: Colors.orangeAccent,
+                    icon: Icon(Icons.star),
+                    disabledColor: Colors.grey,
+                    highlightColor: Colors.black38,
                   ),
                   SizedBox(width: 10.0),
                   Text("Hi, Username",style: TextStyle(color: Colors.white),),
@@ -147,14 +226,3 @@ class HomeState extends State<Home_screen> {
   }
 }
 
-/*class varitem {
-  var no = 0;
-  var array1 = ['C','C++','Java'],
-  number;
-  return array1[number];
-
-}*/
-
-class tapping {
-  onTap () => Home()
-}

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sarvakaraum/screens/home_screen.dart';
-import 'package:sarvakaraum/screens/course/main.dart';
 
 
 class GridDashboard extends StatefulWidget {
@@ -93,7 +92,7 @@ class _GridDashboardState extends State<GridDashboard> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => course(),   //Material button function
+                              builder: (context) => Home_screen(),   //Material button function
                             ),
                           );
                         },
