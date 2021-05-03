@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:convert';
+import 'package:sarvakaraum/main.dart';
 
 
 void main() => runApp(MaterialApp(home: Home_screen()));
@@ -44,11 +45,11 @@ class HomeState extends State<Home_screen> {
               gridDelegate:
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,childAspectRatio: 3/2),
               children: <Widget>[
-                _gridItem(Icons.dashboard,"C"),
-                _gridItem(Icons.menu,"C++"),
-                _gridItem(Icons.book,"Java"),
-                _gridItem(Icons.computer,"Python"),
-                _gridItem(Icons.pending_actions,"C#"),
+                _gridItem("c_screen","C"),
+                _gridItem("c_plus_screen","C++"),
+                _gridItem("java_screen","Java"),
+                _gridItem("python_screen","Py"),
+                _gridItem("c#_screen","C#"),
               ]
             ),
           ),
@@ -63,35 +64,36 @@ class HomeState extends State<Home_screen> {
               ],
             ),
           ),
-          _cardItem(1),
+          /*_cardItem(1),
           _cardItem(2),
           _cardItem(3),
-          _cardItem(4),
+          _cardItem(4),*/
         ],
       ),
     );
   }
 
-  _gridItem(icon,text) {
+ // _cardItem()
+  _gridItem(funct,text) {
     return Column(
       children: <Widget>[
-        CircleAvatar(
-            child: Icon(
-            icon,size: 16.0,
-            color:Colors.white,
-          ),
-          backgroundColor: Colors.deepOrange.withOpacity(0.9),
+    GestureDetector(
+        onTap ()  Home();
+        child: CircleAvatar(
+          backgroundColor: Colors.brown.shade800,
+
         ),
-        SizedBox(height: 10.0),
-        Text(
+        child: SizedBox(height: 10.0),
+        child: Text(
           text,
           style: TextStyle(
             fontSize: 11.0,
           ),
         )
+    ),
       ]
+
     );
-  }
 
   _top() {
     return Container(
@@ -152,3 +154,7 @@ class HomeState extends State<Home_screen> {
   return array1[number];
 
 }*/
+
+class tapping {
+  onTap () => Home()
+}
