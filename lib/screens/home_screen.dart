@@ -72,7 +72,7 @@ class HomeState extends State<Home_screen> {
       ),
     );
   }
-
+//comments
  // _cardItem()
   _gridItem(funct,text) {
     return Column(
