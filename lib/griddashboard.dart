@@ -93,7 +93,7 @@ class _GridDashboardState extends State<GridDashboard> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => course(),   //Material button function
+                              builder: (context) => HomeScreen(),   //Material button function
                             ),
                           );
                         },
