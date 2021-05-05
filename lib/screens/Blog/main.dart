@@ -5,15 +5,15 @@ import 'dart:convert';
 import 'package:sarvakaraum/main.dart';
 
 
-void main() => runApp(MaterialApp(home: Home_screen()));
+void main() => runApp(MaterialApp(home: Blogs_dash()));
 
-class Home_screen extends StatefulWidget {
+class Blogs_dash extends StatefulWidget {
   @override
   HomeState createState() => new HomeState();
 
 }
 
-class HomeState extends State<Home_screen> {
+class HomeState extends State<Blogs_dash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,35 +22,35 @@ class HomeState extends State<Home_screen> {
           _top(),
           SizedBox(height: 20.0),
           Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children:<Widget>[
-                  Text(
-                    "Category",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize:22.0),
-                  ),
-                  Text(
-                    "View All",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize:12.0),
-                  ),
-                ]
-            )
+              padding: EdgeInsets.all(16.0),
+              child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children:<Widget>[
+                    Text(
+                      "Category",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize:22.0),
+                    ),
+                    Text(
+                      "View All",
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize:12.0),
+                    ),
+                  ]
+              )
           ),
           SizedBox(height: 20.0),
           Container(
             height:200.0,
             child: GridView(
-              gridDelegate:
+                gridDelegate:
                 SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,childAspectRatio: 3/2),
-              children: <Widget>[
-                _gridItem("c_screen","C"),
-                _gridItem("c_plus_screen","C++"),
-                _gridItem("java_screen","Java"),
-                _gridItem("python_screen","Py"),
-                _gridItem("c#_screen","C#"),
-              ]
+                children: <Widget>[
+                  _gridItem("c_screen","C"),
+                  _gridItem("c_plus_screen","C++"),
+                  _gridItem("java_screen","Java"),
+                  _gridItem("python_screen","Py"),
+                  _gridItem("c#_screen","C#"),
+                ]
             ),
           ),
           Padding(
@@ -76,41 +76,41 @@ class HomeState extends State<Home_screen> {
     return Padding(padding:EdgeInsets.all(16.0),child:Row(
       children: <Widget>[
         Container(
-          width: 100.0,
-          height: 100.0,
-          decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage("assets/$image.png"),
-            fit: BoxFit.cover,
-            ),
-            borderRadius: BorderRadius.circular(20.0)
-          )
+            width: 100.0,
+            height: 100.0,
+            decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("assets/$image.png"),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(20.0)
+            )
         ),
         SizedBox(width: 20.0),
         Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              title_text,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 22.0
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                title_text,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 22.0
+                ),
               ),
-            ),
-            SizedBox(height: 10.0),
-            Text(
-              read_time,
-              style: TextStyle(
-                color: Colors.red,
-                fontWeight: FontWeight.bold,
+              SizedBox(height: 10.0),
+              Text(
+                read_time,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(height:10.0),
-            Text(
-              author,
-              style:
+              SizedBox(height:10.0),
+              Text(
+                author,
+                style:
                 TextStyle(fontWeight:FontWeight.bold, color: Colors.grey),
-            )
-          ]
+              )
+            ]
         )
       ],
     )
@@ -124,10 +124,10 @@ class HomeState extends State<Home_screen> {
             onPressed: () {
               debugPrint(text);
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
+                context,
+                MaterialPageRoute(
                   builder: (context) => Home(),   //Material button function
-              ),
+                ),
               );
             },
             shape: const StadiumBorder(),
@@ -169,11 +169,11 @@ class HomeState extends State<Home_screen> {
     return Container(
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        color: Colors.deepOrange,
-        borderRadius: BorderRadius.only(
-          bottomLeft:Radius.circular(30.0),
-          bottomRight: Radius.circular(30.0),
-        )),
+          color: Colors.deepOrange,
+          borderRadius: BorderRadius.only(
+            bottomLeft:Radius.circular(30.0),
+            bottomRight: Radius.circular(30.0),
+          )),
       child: Column(
         children: <Widget>[
           Row(
@@ -198,28 +198,28 @@ class HomeState extends State<Home_screen> {
                 ],
               ),
               IconButton(
-                  icon: Icon(
-                      Icons.notifications,
-                      color: Colors.white
-                  ),
-                  onPressed: () {},
+                icon: Icon(
+                    Icons.notifications,
+                    color: Colors.white
+                ),
+                onPressed: () {},
               )
             ],
           ),
           SizedBox(height: 30.0),
           TextField(
             decoration: InputDecoration(
-              hintText: "Search",
-              fillColor: Colors.white,
-              filled: true,
-              suffixIcon: Icon(Icons.filter_list),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20.0),
-                borderSide: BorderSide(color: Colors.transparent),
-              ),
-              contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0)
-              ),
-            )
+                hintText: "Search",
+                fillColor: Colors.white,
+                filled: true,
+                suffixIcon: Icon(Icons.filter_list),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                  borderSide: BorderSide(color: Colors.transparent),
+                ),
+                contentPadding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0)
+            ),
+          )
         ],
       ),
     );

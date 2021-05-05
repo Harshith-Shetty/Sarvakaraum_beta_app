@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sarvakaraum/screens/home_screen.dart';
+import 'package:sarvakaraum/screens/Blog/main.dart';
 import 'package:sarvakaraum/screens/course/main.dart';
-
+import 'package:sarvakaraum/screens/compiler/main.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/home_screen.dart';
 
 class GridDashboard extends StatefulWidget {
   @override
@@ -25,34 +26,34 @@ class _GridDashboardState extends State<GridDashboard> {
     event: "4 Items",
     img: "assets/food.png",
     textf: "food",
-    functioning : "Course_dash",
+    functioning : "Compiler_dash",
   );
 
   Items item3 = new Items(
-    title: "Locations",
+    title: "Documentation",
     subtitle: "Lucy Mao going to Office",
     event: "",
     img: "assets/map.png",
     textf: "map",
-    functioning : "Course_dash",
+    functioning : "Docs_dash",
   );
 
   Items item4 = new Items(
-    title: "Activity",
+    title: "Blogs",
     subtitle: "Rose favirited your Post",
     event: "",
     img: "assets/festival.png",
     textf: "festival",
-    functioning : "Course_dash",
+    functioning : "Blogs_dash",
   );
 
   Items item5 = new Items(
-    title: "To do",
+    title: "Workshop",
     subtitle: "Homework, Design",
     event: "4 Items",
     img: "assets/todo.png",
     textf: "todo",
-    functioning: "Course_dash",
+    functioning: "Workshop_dash",
   );
 
   Items item6 = new Items(
@@ -61,7 +62,7 @@ class _GridDashboardState extends State<GridDashboard> {
     event: "2 Items",
     img: "assets/setting.png",
     textf: "setting",
-    functioning : "Course_dash",
+    functioning : "Settings_dash",
   );
 
   @override
@@ -89,13 +90,63 @@ class _GridDashboardState extends State<GridDashboard> {
                   ),*/
                   Material(
                       child: InkWell(
-                        onTap: () {
+                        /*onTap: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => HomeScreen(),   //Material button function
+                              builder: (context) => Home_screen(),   //Material button function
                             ),
                           );
+                        },*/
+                        onTap: () {
+                          if (data.functioning == "Course_dash") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Course_dash(),   //Material button function
+                              ),
+                            );
+                          }
+                          else if (data.functioning == "Compiler_dash") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Compiler_dash(),   //Material button function
+                              ),
+                            );
+                          }
+                          else if (data.functioning == "Docs_dash") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Docs_dash(),   //Material button function
+                              ),
+                            );
+                          }
+                          else if (data.functioning == "Blogs_dash") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Blogs_dash(),   //Material button function
+                              ),
+                            );
+                          }/*
+                          else if (data.functioning == "Workshop_dash") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Workshop_dash(),   //Material button function
+                              ),
+                            );
+                          }
+                          else if (data.functioning == "Settings_dash") {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Settings_dash(),   //Material button function
+                              ),
+                            );  //Navigator.push
+                          } //elseif */
                         },
                         child: Container(
                           child: ClipRRect(

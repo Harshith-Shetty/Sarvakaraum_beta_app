@@ -1,4 +1,4 @@
-import 'package:sarvakaraum/screens/course/constants.dart';
+import 'package:sarvakaraum/screens/compiler/constants.dart';
 import 'package:sarvakaraum/screens/course/details_screen.dart';
 import 'package:sarvakaraum/screens/course/modules/intro_c_programming.dart';
 import 'package:sarvakaraum/screens/course/model/category.dart';
@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-void main() => runApp(Course_dash_theme());
+void main() => runApp(Compiler_dash_theme());
 
-class Course_dash_theme extends StatelessWidget {
+class Compiler_dash_theme extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class Course_dash_theme extends StatelessWidget {
   }
 }
 
-class Course_dash extends StatelessWidget {
+class Compiler_dash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +39,7 @@ class Course_dash extends StatelessWidget {
             ),
             SizedBox(height: 30),
             Text("Hey Alex,", style: kHeadingextStyle),
-            Text("Find a course you want to learn", style: kSubheadingextStyle),
+            Text("Find a compiler you want to Test with", style: kSubheading2extStyle),
             Container(
               margin: EdgeInsets.symmetric(vertical: 30),
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
@@ -83,44 +83,44 @@ class Course_dash extends StatelessWidget {
                 mainAxisSpacing: 20,
                 itemBuilder: (context, index) {
                   return GestureDetector(
-                      onTap: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            //builder: (context) => DetailsScreen(),   //Material button function
-                           builder: (context) => intro_c(),
-                           //builder: (context) => DetailsScreen(),
-                           //builder: (context) => DetailsScreen(),
-                           //builder: (context) => DetailsScreen(),
+                    onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          //builder: (context) => DetailsScreen(),   //Material button function
+                          builder: (context) => intro_c(),
+                          //builder: (context) => DetailsScreen(),
+                          //builder: (context) => DetailsScreen(),
+                          //builder: (context) => DetailsScreen(),
+                        ),
+                      );
+                    },
+                    child: new Container(
+                      padding: EdgeInsets.all(20),
+                      height: index.isEven ? 200 : 240,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        image: DecorationImage(
+                          image: AssetImage(categories[index].image),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            categories[index].name,
+                            style: kTitleTextStyle,
                           ),
-                        );
-                  },
-                  child: new Container(
-                    padding: EdgeInsets.all(20),
-                    height: index.isEven ? 200 : 240,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      image: DecorationImage(
-                        image: AssetImage(categories[index].image),
-                        fit: BoxFit.fill,
+                          Text(
+                            '${categories[index].numOfCourses} Courses',
+                            style: TextStyle(
+                              color: kTextColor.withOpacity(.5),
+                            ),
+                          )
+                        ],
                       ),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          categories[index].name,
-                          style: kTitleTextStyle,
-                        ),
-                        Text(
-                          '${categories[index].numOfCourses} Courses',
-                          style: TextStyle(
-                            color: kTextColor.withOpacity(.5),
-                          ),
-                        )
-                      ],
-                    ),
-                  ),
                   );
                 },
                 staggeredTileBuilder: (index) => StaggeredTile.fit(1),
