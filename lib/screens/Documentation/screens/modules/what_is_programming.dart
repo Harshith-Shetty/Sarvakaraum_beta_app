@@ -38,7 +38,7 @@ class what_is_prog extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ChapterCard(
-                        name: "Basic Programming",
+                        name: "Understand Programming",
                         chapterNumber: 1,
                         tag: "getting started with programming",
                         press: () {
@@ -46,15 +46,15 @@ class what_is_prog extends StatelessWidget {
                         },
                       ),
                       ChapterCard(
-                        name: "Power",
+                        name: "Why to learn to coding",
                         chapterNumber: 2,
-                        tag: "Everything loves power",
+                        tag: "coding is ...",
                         press: () {},
                       ),
                       ChapterCard(
-                        name: "Influence",
+                        name: "Programming Language",
                         chapterNumber: 3,
-                        tag: "Influence easily like never before",
+                        tag: "Programming Language are...",
                         press: () {},
                       ),
                       SizedBox(height: 10),
@@ -111,13 +111,13 @@ class what_is_prog extends StatelessWidget {
                                   children: [
                                     TextSpan(
                                       text:
-                                      "How To Win \nFriends & Influence \n",
+                                      "Basic of \nC programming\n",
                                       style: TextStyle(
                                         fontSize: 15,
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "Gary Venchuk",
+                                      text: "Akshat Mehta",
                                       style: TextStyle(color: kLightBlackColor),
                                     ),
                                   ],
@@ -253,7 +253,7 @@ class BookInfo extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Crushing &",
+                      "What is  &",
                       style: Theme.of(context).textTheme.headline4.copyWith(
                           fontSize: 28
                       ),
@@ -264,7 +264,7 @@ class BookInfo extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(top: 0),
                     child: Text(
-                      "Influence",
+                      "Programming",
                       style: Theme.of(context).textTheme.subtitle1.copyWith(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,

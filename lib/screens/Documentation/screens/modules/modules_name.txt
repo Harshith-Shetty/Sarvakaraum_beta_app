@@ -1,0 +1,53 @@
+> What is programming
+    Understanding Programming in layman terms
+    Why to learn to coding
+    Programming Language
+
+> Basic of C programming
+    Understanding C programming
+    Compiler and Interpreter
+    Structure of C program
+    Write your First Program
+
+> Data Type
+    Basic Data Types
+    Primary Data Types
+    User Defined DData Types
+
+
+> Pointers and Data Structure
+    Memory Address
+    Call by Value
+    Call by Reference
+    Basic Programs of Pointers
+    Pointers Advantages
+    Stack
+    Queue
+    Linked List
+
+
+> Algorithm of C
+    Patterns
+    Sorting
+    Graph
+    N-queens
+
+
+
+
+    Assign ment
+        pyhton (3hr)
+        mp  (2hr)
+        mp  (2hr)
+
+    porject
+        dbms (2hr)
+        python  (2hr)
+
+
+        os
+
+    mini project
+
+
+
