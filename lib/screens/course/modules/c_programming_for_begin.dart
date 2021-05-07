@@ -2,7 +2,8 @@ import 'package:sarvakaraum/screens/course/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class c_for_begin extends StatelessWidget {
+// ignore: camel_case_types
+class c_prog_begin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +38,7 @@ class c_for_begin extends StatelessWidget {
                       padding: EdgeInsets.only(
                           left: 10, top: 5, right: 20, bottom: 5),
                       child: Text(
-                        "BestSeller".toUpperCase(),
+                        "Beginner Favorites".toUpperCase(),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                         ),
@@ -67,7 +68,7 @@ class c_for_begin extends StatelessWidget {
                           style: kHeadingextStyle.copyWith(fontSize: 32),
                         ),
                         TextSpan(
-                          text: "\₹ 150",
+                          text: "\₹ 200",
                           style: TextStyle(
                             color: kTextColor.withOpacity(.5),
                             decoration: TextDecoration.lineThrough,
@@ -89,7 +90,8 @@ class c_for_begin extends StatelessWidget {
                 ),
                 child: Stack(
                   children: <Widget>[
-                    Padding(
+                    SingleChildScrollView(
+                    child :Padding(
                       padding: const EdgeInsets.all(30),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,29 +100,32 @@ class c_for_begin extends StatelessWidget {
                           SizedBox(height: 30),
                           CourseContent(
                             number: "01",
-                            duration: 5.35,
-                            title: "Getting Ready",
+                            duration: 2.50,
+                            title: "Installation and  Setup",
                             isDone: true,
                           ),
                           CourseContent(
                             number: '02',
-                            duration: 19.04,
-                            title: "Programming_Intro",
+                            duration: 15.00,
+                            title: "History and Features \nof C Programming",
                             isDone: true,
                           ),
                           CourseContent(
                             number: '03',
-                            duration: 15.35,
-                            title: "C Programming Basic",
+                            duration: 10.50,
+                            title: "Structure and Methodologies \n of C programming",
                           ),
                           CourseContent(
                             number: '04',
-                            duration: 5.35,
-                            title: "Variable Constants and type",
+                            duration: 5.00,
+                            title: "First C Program",
                           ),
+                          SizedBox(height: 60),
                         ],
                       ),
-                    ),
+                  ),
+            ),
+
                     Positioned(
                       right: 0,
                       left: 0,

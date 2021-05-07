@@ -1,10 +1,14 @@
 import 'package:sarvakaraum/screens/course/constants.dart';
 import 'package:sarvakaraum/screens/course/details_screen.dart';
+import 'package:sarvakaraum/screens/course/modules/Advance_of_c.dart';
 import 'package:sarvakaraum/screens/course/modules/intro_c_programming.dart';
 import 'package:sarvakaraum/screens/course/model/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'modules/advance_of_pointer.dart';
+import 'modules/c_programming_for_begin.dart';
 
 void main() => runApp(Course_dash_theme());
 
@@ -14,7 +18,7 @@ class Course_dash_theme extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Course App',
+      title: 'Sarvakaraum Courses',
       theme: ThemeData(),
       home: DetailsScreen(),
     );
@@ -38,7 +42,7 @@ class Course_dash extends StatelessWidget {
               ],
             ),
             SizedBox(height: 30),
-            Text("Hey Alex,", style: kHeadingextStyle),
+            Text("Hey Username,", style: kHeadingextStyle),
             Text("Find a course you want to learn", style: kSubheadingextStyle),
             Container(
               margin: EdgeInsets.symmetric(vertical: 30),
@@ -84,7 +88,7 @@ class Course_dash extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                       onTap: (){
-                        Navigator.push(
+                        /*Navigator.push(
                           context,
                           MaterialPageRoute(
                             //builder: (context) => DetailsScreen(),   //Material button function
@@ -92,8 +96,41 @@ class Course_dash extends StatelessWidget {
                            //builder: (context) => DetailsScreen(),
                            //builder: (context) => DetailsScreen(),
                            //builder: (context) => DetailsScreen(),
+
                           ),
-                        );
+                        );*/
+                        if (categories[index].screening == "intro_c") {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => intro_c(),   //Material button function
+                            ),
+                          );
+                        }
+                        else if (categories[index].screening == "c_prog_begin") {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => c_prog_begin(),   //Material button function
+                            ),
+                          );
+                        }
+                        else if (categories[index].screening == "adva_c") {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => adva_c(),   //Material button function
+                            ),
+                          );
+                        }
+                        else if (categories[index].screening == "adva_c_point") {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => adva_c_point(),   //Material button function
+                            ),
+                          );
+                        }
                   },
                   child: new Container(
                     padding: EdgeInsets.all(20),

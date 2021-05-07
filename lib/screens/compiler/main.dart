@@ -1,7 +1,6 @@
 import 'package:sarvakaraum/screens/compiler/constants.dart';
 import 'package:sarvakaraum/screens/course/details_screen.dart';
-import 'package:sarvakaraum/screens/course/modules/intro_c_programming.dart';
-import 'package:sarvakaraum/screens/course/model/category.dart';
+import 'package:sarvakaraum/screens/compiler/model/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -84,16 +83,38 @@ class Compiler_dash extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: (){
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          //builder: (context) => DetailsScreen(),   //Material button function
-                          builder: (context) => intro_c(),
-                          //builder: (context) => DetailsScreen(),
-                          //builder: (context) => DetailsScreen(),
-                          //builder: (context) => DetailsScreen(),
-                        ),
-                      );
+                      if (categories[index].screening == "c_web") {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Compiler_dash(),   //Material button function
+                          ),
+                        );
+                      }
+                      else if (categories[index].screening == "c++_web") {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Compiler_dash(),   //Material button function
+                          ),
+                        );
+                      }
+                      else if (categories[index].screening == "java") {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Compiler_dash(),   //Material button function
+                          ),
+                        );
+                      }
+                      else if (categories[index].screening == "adva_c_point") {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Compiler_dash(),   //Material button function
+                          ),
+                        );
+                      }
                     },
                     child: new Container(
                       padding: EdgeInsets.all(20),
@@ -113,7 +134,7 @@ class Compiler_dash extends StatelessWidget {
                             style: kTitleTextStyle,
                           ),
                           Text(
-                            '${categories[index].numOfCourses} Courses',
+                            '${categories[index].state} State',
                             style: TextStyle(
                               color: kTextColor.withOpacity(.5),
                             ),

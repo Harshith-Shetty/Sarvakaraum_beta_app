@@ -2,7 +2,8 @@ import 'package:sarvakaraum/screens/course/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class adv_of_pointer extends StatelessWidget {
+// ignore: camel_case_types
+class adva_c_point extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +38,7 @@ class adv_of_pointer extends StatelessWidget {
                       padding: EdgeInsets.only(
                           left: 10, top: 5, right: 20, bottom: 5),
                       child: Text(
-                        "BestSeller".toUpperCase(),
+                        "Beginner Favorites".toUpperCase(),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                         ),
@@ -67,7 +68,7 @@ class adv_of_pointer extends StatelessWidget {
                           style: kHeadingextStyle.copyWith(fontSize: 32),
                         ),
                         TextSpan(
-                          text: "\₹ 150",
+                          text: "\₹ 200",
                           style: TextStyle(
                             color: kTextColor.withOpacity(.5),
                             decoration: TextDecoration.lineThrough,
@@ -89,38 +90,37 @@ class adv_of_pointer extends StatelessWidget {
                 ),
                 child: Stack(
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text("Course Content", style: kTitleTextStyle),
-                          SizedBox(height: 30),
-                          CourseContent(
-                            number: "01",
-                            duration: 5.35,
-                            title: "Getting Ready",
-                            isDone: true,
-                          ),
-                          CourseContent(
-                            number: '02',
-                            duration: 19.04,
-                            title: "Programming_Intro",
-                            isDone: true,
-                          ),
-                          CourseContent(
-                            number: '03',
-                            duration: 15.35,
-                            title: "C Programming Basic",
-                          ),
-                          CourseContent(
-                            number: '04',
-                            duration: 5.35,
-                            title: "Variable Constants and type",
-                          ),
-                        ],
+                    SingleChildScrollView(
+                      child :Padding(
+                        padding: const EdgeInsets.all(30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text("Course Content", style: kTitleTextStyle),
+                            SizedBox(height: 30),
+                            CourseContent(
+                              number: "01",
+                              duration: 5.35,
+                              title: "Call by Value & Reference",
+                              isDone: true,
+                            ),
+                            CourseContent(
+                              number: '02',
+                              duration: 19.04,
+                              title: "Pointer Basic",
+                              isDone: true,
+                            ),
+                            CourseContent(
+                              number: '03',
+                              duration: 15.35,
+                              title: "Pointer Advance",
+                            ),
+                            SizedBox(height: 60),
+                          ],
+                        ),
                       ),
                     ),
+
                     Positioned(
                       right: 0,
                       left: 0,

@@ -2,7 +2,7 @@ import 'package:sarvakaraum/screens/course/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class adv_of_c extends StatelessWidget {
+class adva_c extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +37,7 @@ class adv_of_c extends StatelessWidget {
                       padding: EdgeInsets.only(
                           left: 10, top: 5, right: 20, bottom: 5),
                       child: Text(
-                        "BestSeller".toUpperCase(),
+                        "Beginner Favorites".toUpperCase(),
                         style: TextStyle(
                           fontWeight: FontWeight.w600,
                         ),
@@ -45,7 +45,7 @@ class adv_of_c extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 16),
-                  Text("Introduction to C programming", style: kHeadingextStyle),
+                  Text("Advanced C Programming Course", style: kHeadingextStyle),
                   SizedBox(height: 16),
                   Row(
                     children: <Widget>[
@@ -67,7 +67,7 @@ class adv_of_c extends StatelessWidget {
                           style: kHeadingextStyle.copyWith(fontSize: 32),
                         ),
                         TextSpan(
-                          text: "\₹ 150",
+                          text: "\₹ 200",
                           style: TextStyle(
                             color: kTextColor.withOpacity(.5),
                             decoration: TextDecoration.lineThrough,
@@ -89,38 +89,43 @@ class adv_of_c extends StatelessWidget {
                 ),
                 child: Stack(
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(30),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text("Course Content", style: kTitleTextStyle),
-                          SizedBox(height: 30),
-                          CourseContent(
-                            number: "01",
-                            duration: 5.35,
-                            title: "Getting Ready",
-                            isDone: true,
-                          ),
-                          CourseContent(
-                            number: '02',
-                            duration: 19.04,
-                            title: "Programming_Intro",
-                            isDone: true,
-                          ),
-                          CourseContent(
-                            number: '03',
-                            duration: 15.35,
-                            title: "C Programming Basic",
-                          ),
-                          CourseContent(
-                            number: '04',
-                            duration: 5.35,
-                            title: "Variable Constants and type",
-                          ),
-                        ],
+                    SingleChildScrollView(
+                      child :Padding(
+                        padding: const EdgeInsets.all(30),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text("Course Content", style: kTitleTextStyle),
+                            SizedBox(height: 30),
+
+                            CourseContent(
+                              number: "01",
+                              duration: 5.35,
+                              title: "Accessing Elements of \nStructure",
+                              isDone: true,
+                            ),
+                            CourseContent(
+                              number: '02',
+                              duration: 19.04,
+                              title: "Range of Signed/Unsigned \nData-types",
+                              isDone: true,
+                            ),
+                            CourseContent(
+                              number: '03',
+                              duration: 15.35,
+                              title: "Efficient way of Printing \nPointers",
+                            ),
+                            CourseContent(
+                              number: '04',
+                              duration: 15.35,
+                              title: "Compiler Memory Allocation\nfor Data-types",
+                            ),
+                            SizedBox(height: 60),
+                          ],
+                        ),
                       ),
                     ),
+
                     Positioned(
                       right: 0,
                       left: 0,
@@ -268,3 +273,6 @@ class BestSellerClipper extends CustomClipper<Path> {
     return false;
   }
 }
+
+
+
