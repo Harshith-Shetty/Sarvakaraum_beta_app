@@ -1,4 +1,7 @@
 import 'package:sarvakaraum/screens/compiler/constants.dart';
+import 'package:sarvakaraum/screens/compiler/screens/c++_compiler.dart';
+import 'package:sarvakaraum/screens/compiler/screens/c_compiler.dart';
+import 'package:sarvakaraum/screens/compiler/screens/java_compiler.dart';
 import 'package:sarvakaraum/screens/course/details_screen.dart';
 import 'package:sarvakaraum/screens/compiler/model/category.dart';
 import 'package:flutter/material.dart';
@@ -87,7 +90,7 @@ class Compiler_dash extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Compiler_dash(),   //Material button function
+                            builder: (context) => c_web(),   //Material button function
                           ),
                         );
                       }
@@ -95,7 +98,7 @@ class Compiler_dash extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Compiler_dash(),   //Material button function
+                            builder: (context) => cplus_web(),   //Material button function
                           ),
                         );
                       }
@@ -103,15 +106,7 @@ class Compiler_dash extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Compiler_dash(),   //Material button function
-                          ),
-                        );
-                      }
-                      else if (categories[index].screening == "adva_c_point") {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => Compiler_dash(),   //Material button function
+                            builder: (context) => java_web(),   //Material button function
                           ),
                         );
                       }
