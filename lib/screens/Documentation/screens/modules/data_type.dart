@@ -1,4 +1,7 @@
 import 'package:sarvakaraum/screens/Documentation/consttants.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/chp1_data_type.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/chp2_data_type.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/chp3_data_type.dart';
 import 'package:sarvakaraum/screens/Documentation/widgets/book_rating.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/variable.dart';
 import 'package:sarvakaraum/screens/Documentation/widgets/rounded_button.dart';
@@ -38,31 +41,26 @@ class data_type extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ChapterCard(
-                        name: "Money",
+                        name: "Basic Data Types",
                         chapterNumber: 1,
-                        tag: "Life is about change",
+                        tag: "InBuilt Data Types",
                         press: () {
 
                         },
                       ),
                       ChapterCard(
-                        name: "Power",
+                        name: "Primary Data Types",
                         chapterNumber: 2,
-                        tag: "Everything loves power",
+                        tag: "",
                         press: () {},
                       ),
                       ChapterCard(
-                        name: "Influence",
+                        name: "User Defined Data Types",
                         chapterNumber: 3,
-                        tag: "Influence easily like never before",
+                        tag: "",
                         press: () {},
                       ),
-                      ChapterCard(
-                        name: "Win",
-                        chapterNumber: 4,
-                        tag: "Winning is what matters",
-                        press: () {},
-                      ),
+
                       SizedBox(height: 10),
                     ],
                   ),
@@ -117,13 +115,13 @@ class data_type extends StatelessWidget {
                                   children: [
                                     TextSpan(
                                       text:
-                                      "How To Win \nFriends & Influence \n",
+                                      "Pointers and\n Data Structure \n",
                                       style: TextStyle(
                                         fontSize: 15,
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "Gary Venchuk",
+                                      text: "Harshith Shetty",
                                       style: TextStyle(color: kLightBlackColor),
                                     ),
                                   ],
@@ -226,9 +224,35 @@ class ChapterCard extends StatelessWidget {
           IconButton(
             icon: Icon(
               Icons.arrow_forward_ios,
-              size: 18,
+              size: 19,
             ),
-            onPressed: press,
+            onPressed: ()
+            {
+              if (chapterNumber == 1) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => data_type_chp1(),   //Material button function
+                  ),
+                );
+              }
+              else if (chapterNumber == 2) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => data_type_chp2(),   //Material button function
+                  ),
+                );
+              }
+              else if (chapterNumber == 3) {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => data_type_chp3(),   //Material button function
+                  ),
+                );
+              }
+            }, //onPressed
           )
         ],
       ),
@@ -259,7 +283,7 @@ class BookInfo extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Crushing &",
+                      "Data",
                       style: Theme.of(context).textTheme.headline4.copyWith(
                           fontSize: 28
                       ),
@@ -270,7 +294,7 @@ class BookInfo extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(top: 0),
                     child: Text(
-                      "Influence",
+                      "  Types",
                       style: Theme.of(context).textTheme.subtitle1.copyWith(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -286,7 +310,7 @@ class BookInfo extends StatelessWidget {
                             width: this.size.width * .3,
                             padding: EdgeInsets.only(top: this.size.height * .02),
                             child: Text(
-                              "When the earth was flat andeveryone wanted to win the gameof the best and people and winning with an A game with all the things you have.",
+                              "A data type specifies the type of data that a variable can store such as integer, floating, character, etc. The basic data types........... ",
                               maxLines: 5,
                               style: TextStyle(
                                 fontSize: 10,

@@ -40,7 +40,7 @@ class _HomePage extends State<data_type_full> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Data Type'),
+        title: Text('Syncfusion Flutter PDF Viewer'),
         actions: <Widget>[
           IconButton(
             icon: Icon(

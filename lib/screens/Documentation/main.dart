@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                 style: Theme.of(context).textTheme.display3,
                 children: [
                   TextSpan(
-                    text: "flamin",
+                    text: "Sarvakaraum Reads",
                   ),
                   TextSpan(
                     text: "go.",

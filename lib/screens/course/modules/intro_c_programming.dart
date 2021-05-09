@@ -1,6 +1,8 @@
 import 'package:sarvakaraum/screens/course/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sarvakaraum/screens/course/modules/Advance_of_c.dart';
+import 'package:sarvakaraum/screens/course/modules/Getting_Ready.dart';
 
 // ignore: camel_case_types
 class intro_c extends StatelessWidget {
@@ -247,7 +249,43 @@ class CourseContent extends StatelessWidget {
               shape: BoxShape.circle,
               color: kGreenColor.withOpacity(isDone ? 1 : .5),
             ),
-            child: Icon(Icons.play_arrow, color: Colors.white),
+            child: IconButton(
+                icon: Icon(Icons.play_arrow, color: Colors.white),
+                onPressed: (){
+                  if (title == "Getting Ready") {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => getting_ready(),   //Material button function
+                      ),
+                    );
+                  }
+                  else if (title == "Programming_Intro") {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => adva_c(),   //Material button function
+                      ),
+                    );
+                  }
+                  else if (title == "C Programming Basic") {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => adva_c(),   //Material button function
+                      ),
+                    );
+                  }
+                  else if (title == "Variable Constants and type") {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => adva_c(),   //Material button function
+                      ),
+                    );
+                  }
+                },
+            )
           )
         ],
       ),

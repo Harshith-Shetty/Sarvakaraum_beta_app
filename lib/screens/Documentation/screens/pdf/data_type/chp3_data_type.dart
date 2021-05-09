@@ -15,20 +15,20 @@ class data_type_full extends StatelessWidget {
 }
 */
 
-void data_full() {
+void data_chp3() {
   runApp(MaterialApp(
     title: 'Syncfusion PDF Viewer Demo',
-    home: data_type_full(),
+    home: data_type_chp3(),
   ));
 }
 
 /// Represents Homepage for Navigation
-class data_type_full extends StatefulWidget {
+class data_type_chp3 extends StatefulWidget {
   @override
   _HomePage createState() => _HomePage();
 }
 
-class _HomePage extends State<data_type_full> {
+class _HomePage extends State<data_type_chp3> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
 
   @override
@@ -40,7 +40,7 @@ class _HomePage extends State<data_type_full> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Data Type'),
+        title: Text('User Defined Data Types'),
         actions: <Widget>[
           IconButton(
             icon: Icon(
@@ -54,7 +54,7 @@ class _HomePage extends State<data_type_full> {
         ],
       ),
       body: SfPdfViewer.network(
-        'https://sarvakaraum.s3.amazonaws.com/Books/C/Data+Types.pdf',
+        'https://sarvakaraum.s3.amazonaws.com/Books/C/Data+Types/chp3_User_defined_Data_Types.pdf',
         key: _pdfViewerKey,
       ),
     );

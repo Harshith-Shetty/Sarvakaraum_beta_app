@@ -14,7 +14,7 @@ class c_web extends StatelessWidget {
           title: Text('C Compiler'),
         ),
         body: WebView(
-          initialUrl:"https://main.d31te9s3lvqqdw.amplifyapp.com/",
+          initialUrl:"https://main.d39gvr2mo23zdt.amplifyapp.com/",
           //javascriptMode: JavascriptMode.unrestricted,
           ),
         ),

@@ -1,5 +1,8 @@
 import 'package:sarvakaraum/screens/Documentation/consttants.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/details_screen.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/modules/Algorithm_in_c.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/modules/data_type.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/modules/pointers_and_data_structure.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/data_type_full.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/variable.dart';
 import 'package:sarvakaraum/screens/Documentation/widgets/book_rating.dart';
@@ -8,6 +11,7 @@ import 'package:sarvakaraum/screens/Documentation/widgets/two_side_rounded_butto
 
 import 'package:flutter/material.dart';
 
+import 'modules/basic_of_c_programming.dart';
 import 'modules/what_is_programming.dart';
 
 class Docs_dash extends StatelessWidget {
@@ -54,7 +58,7 @@ class Docs_dash extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         ReadingListCard(
-                          image: "assets/images/book-1.png",
+                          image: "assets/images/what_is_prog.png.png",
                           title: "What Is Programming",
                           auth: "Akshat Mehta",
                           rating: 4.9,
@@ -70,7 +74,7 @@ class Docs_dash extends StatelessWidget {
                           },
                         ),
                         ReadingListCard(
-                          image: "assets/images/book-2.png",
+                          image: "assets/images/BOOK_2(RBG).png",
                           title: "Basic of C programming",
                           auth: "Akshat Mehta",
                           rating: 4.8,
@@ -79,14 +83,14 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return DetailsScreen();
+                                  return basic_of_c();
                                 },
                               ),
                             );
                           },
                         ),
                         ReadingListCard(
-                          image: "assets/images/book-2.png",
+                          image: "assets/images/BOOK_2(RBG).png",
                           title: "Data Types",
                           auth: "Rutuja Khumbhar",
                           rating: 4.9,
@@ -95,7 +99,7 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return DetailsScreen();
+                                  return data_type();
                                 },
                               ),
                             );
@@ -121,7 +125,7 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return DetailsScreen();
+                                  return point_and_ds();
                                 },
                               ),
                             );
@@ -137,7 +141,7 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return DetailsScreen();
+                                  return algo_in_c();
                                 },
                               ),
                             );
@@ -176,7 +180,7 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return DetailsScreen();
+                                  return what_is_prog();
                                 },
                               ),
                             );
@@ -192,7 +196,7 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return DetailsScreen();
+                                  return point_and_ds();
                                 },
                               ),
                             );
@@ -208,7 +212,7 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return DetailsScreen();
+                                  return algo_in_c();
                                 },
                               ),
                             );

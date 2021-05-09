@@ -13,7 +13,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.11.0 <3.0.0"
 
 dependencies:
   #google_fonts: ^0.2.0
@@ -28,10 +28,14 @@ dependencies:
   cupertino_icons: ^0.1.2
   syncfusion_flutter_pdfviewer: ^19.1.0
   webview_flutter: ^2.0.4
+  video_viewer: ^1.2.2
+  #neeko: ^0.0.10
+  #video_player: ^1.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
 
 
 # For information on the generic Dart part of this file, see the
@@ -50,6 +54,7 @@ flutter:
     - assets/
     - assets/icons/
     - assets/images/
+    - assets/images/book1.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -38,7 +38,7 @@ class basic_of_c extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ChapterCard(
-                        name: "Basic Programming",
+                        name: "Understanding C \n                     programming",
                         chapterNumber: 1,
                         tag: "getting started with programming",
                         press: () {
@@ -46,15 +46,21 @@ class basic_of_c extends StatelessWidget {
                         },
                       ),
                       ChapterCard(
-                        name: "Power",
+                        name: "Compiler and Interpreter",
                         chapterNumber: 2,
-                        tag: "Everything loves power",
+                        tag: "Installation of c compiler",
                         press: () {},
                       ),
                       ChapterCard(
-                        name: "Influence",
+                        name: "Structure of C program",
                         chapterNumber: 3,
-                        tag: "Influence easily like never before",
+                        tag: "",
+                        press: () {},
+                      ),
+                      ChapterCard(
+                        name: "Write your First Program",
+                        chapterNumber: 4,
+                        tag: "",
                         press: () {},
                       ),
                       SizedBox(height: 10),
@@ -111,13 +117,13 @@ class basic_of_c extends StatelessWidget {
                                   children: [
                                     TextSpan(
                                       text:
-                                      "How To Win \nFriends & Influence \n",
+                                      "What is \nProgramming \n",
                                       style: TextStyle(
                                         fontSize: 15,
                                       ),
                                     ),
                                     TextSpan(
-                                      text: "Gary Venchuk",
+                                      text: "Akshat Mehta",
                                       style: TextStyle(color: kLightBlackColor),
                                     ),
                                   ],
@@ -209,10 +215,7 @@ class ChapterCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                TextSpan(
-                  text: tag,
-                  style: TextStyle(color: kLightBlackColor),
-                ),
+
               ],
             ),
           ),
@@ -253,7 +256,7 @@ class BookInfo extends StatelessWidget {
                   Container(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Crushing &",
+                      "Basic of",
                       style: Theme.of(context).textTheme.headline4.copyWith(
                           fontSize: 28
                       ),
@@ -264,7 +267,7 @@ class BookInfo extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.only(top: 0),
                     child: Text(
-                      "Influence",
+                      "C Programming",
                       style: Theme.of(context).textTheme.subtitle1.copyWith(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -280,7 +283,7 @@ class BookInfo extends StatelessWidget {
                             width: this.size.width * .3,
                             padding: EdgeInsets.only(top: this.size.height * .02),
                             child: Text(
-                              "When the earth was flat andeveryone wanted to win the gameof the best and people and winning with an A game with all the things you have.",
+                              "C is a general-purpose programming language that is extremely popular, simple, and flexible to use. It is a structured ......",
                               maxLines: 5,
                               style: TextStyle(
                                 fontSize: 10,
