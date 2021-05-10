@@ -1,8 +1,9 @@
 import 'package:sarvakaraum/screens/course/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sarvakaraum/screens/course/modules/Advance_of_c.dart';
-import 'package:sarvakaraum/screens/course/modules/Getting_Ready.dart';
+import 'Advance_of_c.dart';
+import 'video/Getting_Ready.dart';
+import 'video/programming_intro.dart';
 
 // ignore: camel_case_types
 class intro_c extends StatelessWidget {
@@ -14,7 +15,7 @@ class intro_c extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color(0xFFF5F4EF),
           image: DecorationImage(
-            image: AssetImage("assets/images/ux_big.png"),
+            image: AssetImage("assets/images/cover_full_with_banner.png"),
             alignment: Alignment.topRight,
           ),
         ),
@@ -47,7 +48,7 @@ class intro_c extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 18.5),
                   Text("Introduction to C programming", style: kHeadingextStyle),
                   SizedBox(height: 16),
                   Row(
@@ -264,25 +265,15 @@ class CourseContent extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => adva_c(),   //Material button function
+                        builder: (context) => programming_intro(),   //Material button function
                       ),
                     );
                   }
                   else if (title == "C Programming Basic") {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => adva_c(),   //Material button function
-                      ),
-                    );
+
                   }
                   else if (title == "Variable Constants and type") {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => adva_c(),   //Material button function
-                      ),
-                    );
+
                   }
                 },
             )

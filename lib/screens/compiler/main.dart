@@ -124,10 +124,10 @@ class Compiler_dash extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text(
+                          /*Text(
                             categories[index].name,
                             style: kTitleTextStyle,
-                          ),
+                          ),*/
                           Text(
                             '${categories[index].state} State',
                             style: TextStyle(

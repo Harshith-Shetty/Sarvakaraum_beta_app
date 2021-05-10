@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 // Colors
-const kTextColor = Color(0xFF0D1333);
+const kTextColor = Color(0xFF000000);
 const kBlueColor = Color(0xFF6E8AFA);
-const kBestSellerColor = Color(0xFFFFD073);
+const kBestSellerColor = Color(0xFF2299E9);
 const kGreenColor = Color(0xFF49CC96);
 
 // My Text Styles

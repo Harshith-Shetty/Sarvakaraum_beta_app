@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sarvakaraum/screens/Blog/main.dart';
+import 'package:sarvakaraum/screens/Blog/screens/home_page.dart';
 import 'package:sarvakaraum/screens/course/main.dart';
 import 'package:sarvakaraum/screens/compiler/main.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/home_screen.dart';

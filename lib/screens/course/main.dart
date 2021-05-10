@@ -1,8 +1,8 @@
-import 'package:sarvakaraum/screens/course/constants.dart';
-import 'package:sarvakaraum/screens/course/details_screen.dart';
-import 'package:sarvakaraum/screens/course/modules/Advance_of_c.dart';
-import 'package:sarvakaraum/screens/course/modules/intro_c_programming.dart';
-import 'package:sarvakaraum/screens/course/model/category.dart';
+import 'constants.dart';
+import 'details_screen.dart';
+import 'modules/Advance_of_c.dart';
+import 'modules/intro_c_programming.dart';
+import 'model/category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -26,9 +26,10 @@ class Course_dash_theme extends StatelessWidget {
 }
 
 class Course_dash extends StatelessWidget {
-  @override
+  // @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfffffee4),
       body: Padding(
         padding: EdgeInsets.only(left: 20, top: 50, right: 20),
         child: Column(
@@ -38,11 +39,11 @@ class Course_dash extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 SvgPicture.asset("assets/icons/menu.svg"),
-                Image.asset("assets/images/user.png"),
+                Image.asset("assets/images/users.png"),
               ],
             ),
             SizedBox(height: 30),
-            Text("Hey Username,", style: kHeadingextStyle),
+            Text("Hey User,", style: kHeadingextStyle),
             Text("Find a course you want to learn", style: kSubheadingextStyle),
             Container(
               margin: EdgeInsets.symmetric(vertical: 30),
@@ -50,7 +51,7 @@ class Course_dash extends StatelessWidget {
               height: 60,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Color(0xFFF5F5F7),
+                color: Color(0xFFfed9b7),
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Row(
@@ -61,7 +62,7 @@ class Course_dash extends StatelessWidget {
                     "Search for anything",
                     style: TextStyle(
                       fontSize: 18,
-                      color: Color(0xFFA0A5BD),
+                      color: Color(0xff0a0a0a),
                     ),
                   )
                 ],

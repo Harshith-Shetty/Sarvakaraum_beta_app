@@ -13,8 +13,8 @@ List<Category> categories = categoriesData
     .toList();
 
 var categoriesData = [
-  {"name": "Introductory C Programming", 'courses': 4 , 'image': "assets/images/marketing.png", 'screening': "intro_c"},
-  {"name": "C Programming For Beginners", 'courses': 4, 'image': "assets/images/ux_design.png", 'screening': "c_prog_begin"},
-  {"name": "Advanced C Programming Course", 'courses': 4, 'image': "assets/images/photography.png", 'screening': "adva_c"},
-  {"name": "Advanced C Pointers", 'courses': 3, 'image': "assets/images/business.png", 'screening': "adva_c_point"},
+  {"name": "Introductory C Programming", 'courses': 4 , 'image': "assets/images/intro_c_prog.png", 'screening': "intro_c"},
+  {"name": "C Programming For Beginners", 'courses': 4, 'image': "assets/images/c_for_beg.png", 'screening': "c_prog_begin"},
+  {"name": "Advanced C Programming", 'courses': 4, 'image': "assets/images/adv_prog.png", 'screening': "adva_c"},
+  {"name": "Advanced C Pointers", 'courses': 3, 'image': "assets/images/Advance_c_pointer.png", 'screening': "adva_c_point"},
 ];

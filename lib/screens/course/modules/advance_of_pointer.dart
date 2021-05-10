@@ -12,7 +12,7 @@ class adva_c_point extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color(0xFFF5F4EF),
           image: DecorationImage(
-            image: AssetImage("assets/images/ux_big.png"),
+            image: AssetImage("assets/images/cover_full_with_banner.png"),
             alignment: Alignment.topRight,
           ),
         ),
@@ -45,8 +45,8 @@ class adva_c_point extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 16),
-                  Text("Introduction to C programming", style: kHeadingextStyle),
+                  SizedBox(height: 18.5),
+                  Text("Advanced C Pointer", style: kHeadingextStyle),
                   SizedBox(height: 16),
                   Row(
                     children: <Widget>[

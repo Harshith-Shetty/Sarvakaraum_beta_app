@@ -34,10 +34,10 @@ class dashboard_State extends State<dashboard> {
               },
             )
           ],
-          backgroundColor: Color(0xfffefecc),
+          backgroundColor: Color(0xff155a02),
           title: Text("Sarvakaraum", style: TextStyle(color: Colors.black87))
       ),
-      drawer: new Drawer(
+      /*drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
             new UserAccountsDrawerHeader(
@@ -84,8 +84,8 @@ class dashboard_State extends State<dashboard> {
                 }),
           ],
         ),
-      ),
-      backgroundColor: Color(0xfffefecc),
+      ),*/
+      backgroundColor: Color(0xff2e5100),
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -99,35 +99,29 @@ class dashboard_State extends State<dashboard> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+                    SizedBox(
+                      height: 15,
+                    ),
                     Text(
                       "Welcome,",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
                               color: Colors.black,
-                              fontSize: 18,
+                              fontSize: 28,
                               fontWeight: FontWeight.bold)),
                     ),
-                    SizedBox(
-                      height: 4,
-                    ),
+
                     Text(
                       "user",
                       style: GoogleFonts.openSans(
                           textStyle: TextStyle(
                               color: Color(0xffa29aac),
-                              fontSize: 14,
+                              fontSize: 20,
                               fontWeight: FontWeight.w600)),
                     ),
                   ],
                 ),
-                IconButton(
-                  alignment: Alignment.topCenter,
-                  icon: Image.asset(
-                    "assets/notification.png",
-                    width: 24,
-                  ),
-                  onPressed: () {},
-                )
+
               ],
             ),
           ),
