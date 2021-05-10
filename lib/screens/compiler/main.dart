@@ -27,6 +27,7 @@ class Compiler_dash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff070505),
       body: Padding(
         padding: EdgeInsets.only(left: 20, top: 50, right: 20),
         child: Column(
@@ -36,11 +37,11 @@ class Compiler_dash extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 SvgPicture.asset("assets/icons/menu.svg"),
-                Image.asset("assets/images/user.png"),
+                Image.asset("assets/images/users.png"),
               ],
             ),
             SizedBox(height: 30),
-            Text("Hey Alex,", style: kHeadingextStyle),
+            Text("Hey User,", style: kHeadingextStyle),
             Text("Find a compiler you want to Test with", style: kSubheading2extStyle),
             Container(
               margin: EdgeInsets.symmetric(vertical: 30),

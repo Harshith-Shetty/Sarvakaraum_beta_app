@@ -13,7 +13,7 @@ List<Category> categories = categoriesData
     .toList();
 
 var categoriesData = [
-  {"name": "C", 'state': "Stable" , 'image': "assets/images/marketing.png", 'screening': "c_web"},
-  {"name": "C++", 'state': "Beta", 'image': "assets/images/ux_design.png", 'screening': "c++_web"},
-  {"name": "Java", 'state': "Devloping", 'image': "assets/images/photography.png", 'screening': "java"},
+  {"name": "C", 'state': "Stable" , 'image': "assets/compiler/c.png", 'screening': "c_web"},
+  {"name": "C++", 'state': "Beta", 'image': "assets/compiler/cplus.png", 'screening': "c++_web"},
+  {"name": "Java", 'state': "Devloping", 'image': "assets/compiler/java.png", 'screening': "java"},
 ];

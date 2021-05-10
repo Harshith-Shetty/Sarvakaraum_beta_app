@@ -42,7 +42,7 @@ class Docs_dash extends StatelessWidget {
                       text: TextSpan(
                         style: Theme.of(context).textTheme.display1,
                         children: [
-                          TextSpan(text: "What are you \nreading "),
+                          TextSpan(text: "Begineer's \nGuide "),
                           TextSpan(
                               text: "today?",
                               style: TextStyle(
@@ -58,39 +58,46 @@ class Docs_dash extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         ReadingListCard(
-                          image: "assets/images/what_is_prog.png.png",
+                          image: "assets/Books/What is Programming (resized).png",
                           title: "What Is Programming",
                           auth: "Akshat Mehta",
                           rating: 4.9,
                           pressDetails: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return what_is_prog();
-                                },
-                              ),
-                            );
                           },
                         ),
                         ReadingListCard(
-                          image: "assets/images/BOOK_2(RBG).png",
+                          image: "assets/Books/Basics of c programming (resized).png",
                           title: "Basic of C programming",
                           auth: "Akshat Mehta",
                           rating: 4.8,
                           pressDetails: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return basic_of_c();
-                                },
-                              ),
-                            );
                           },
                         ),
+                        SizedBox(width: 30),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  RichText(
+                    text: TextSpan(
+                      style: Theme.of(context).textTheme.display1,
+                      children: [
+
+                        TextSpan(
+                          text: "E",
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        TextSpan(text: "xpert Guide"),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 30),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: <Widget>[
                         ReadingListCard(
-                          image: "assets/images/BOOK_2(RBG).png",
+                          image: "assets/Books/Data Type (resized).png",
                           title: "Data Types",
                           auth: "Rutuja Khumbhar",
                           rating: 4.9,
@@ -109,113 +116,26 @@ class Docs_dash extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) => data_type_full(),
-                                  //return data_type_full();
+                                //return data_type_full();
 
                               ),
                             );
                           },
                         ),
                         ReadingListCard(
-                          image: "assets/images/book-2.png",
+                          image: "assets/Books/Pointers and data struc (resized).png",
                           title: "Pointers and Data Structure",
                           auth: "Harshith Shetty",
                           rating: 4.2,
                           pressDetails: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return point_and_ds();
-                                },
-                              ),
-                            );
                           },
                         ),
                         ReadingListCard(
-                          image: "assets/images/book-2.png",
+                          image: "assets/Books/Algorithms of c (resized).png",
                           title: "Algorithm in C",
                           auth: "Aayush Joshi",
                           rating: 4.8,
                           pressDetails: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return algo_in_c();
-                                },
-                              ),
-                            );
-                          },
-                        ),
-                        SizedBox(width: 30),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 30),
-                  RichText(
-                    text: TextSpan(
-                      style: Theme.of(context).textTheme.display1,
-                      children: [
-
-                        TextSpan(
-                          text: "T",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                        TextSpan(text: "rending"),
-                      ],
-                    ),
-                  ),
-                  SizedBox(height: 30),
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: <Widget>[
-                        ReadingListCard(
-                          image: "assets/images/book-1.png",
-                          title: "What Is Programming",
-                          auth: "Akshat Mehta",
-                          rating: 4.9,
-                          pressDetails: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return what_is_prog();
-                                },
-                              ),
-                            );
-                          },
-                        ),
-                        ReadingListCard(
-                          image: "assets/images/book-2.png",
-                          title: "Pointers and Data Structure",
-                          auth: "Harshith Shetty",
-                          rating: 4.2,
-                          pressDetails: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return point_and_ds();
-                                },
-                              ),
-                            );
-                          },
-                        ),
-                        ReadingListCard(
-                          image: "assets/images/book-2.png",
-                          title: "Algorithm in C",
-                          auth: "Aayush Joshi",
-                          rating: 4.8,
-                          pressDetails: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return algo_in_c();
-                                },
-                              ),
-                            );
                           },
                         ),
                         SizedBox(width: 30),
@@ -240,7 +160,7 @@ class Docs_dash extends StatelessWidget {
                           ),
                         ),
                         bestOfTheDayCard(size, context),
-                        RichText(
+                        /*RichText(
                           text: TextSpan(
                             style: Theme.of(context).textTheme.display1,
                             children: [
@@ -301,7 +221,7 @@ class Docs_dash extends StatelessWidget {
                                                 alignment:
                                                     Alignment.bottomRight,
                                                 child: Text(
-                                                  "Chapter 7 of 10",
+                                                  "Chapter 7 of3",
                                                   style: TextStyle(
                                                     fontSize: 10,
                                                     color: kLightBlackColor,
@@ -313,7 +233,7 @@ class Docs_dash extends StatelessWidget {
                                           ),
                                         ),
                                         Image.asset(
-                                          "assets/images/book-1.png",
+                                          "assets/Books/Basics of c programming (resized).png",
                                           width: 55,
                                         )
                                       ],
@@ -332,7 +252,7 @@ class Docs_dash extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 40),
+                        SizedBox(height: 40),*/
                       ],
                     ),
                   ),
@@ -419,7 +339,7 @@ class Docs_dash extends StatelessWidget {
             right: 0,
             top: 0,
             child: Image.asset(
-              "assets/images/book-3.png",
+              "assets/Books/Data Type (resized).png",
               width: size.width * .37,
             ),
           ),

@@ -15,29 +15,36 @@ class Post {
 class Blogs_dash extends StatelessWidget {
   final data = [
     Post(
-      image: 'assets/blogs/ikigai.jpg',
+      image: 'assets/blogs/colors.png',
       title: 'What is Program Development Cycle?',
       author: 'Akshat Mehta',
       date: '25 Mar 2021',
     ),
     Post(
-      image: 'assets/blogs/leader.jpg',
-      title: 'How to Lead Before You Are in Charge',
-      author: 'John Johny',
+      image: 'assets/blogs/10_skill.png',
+      title: '10 Skills Necessary for Coding',
+      author: 'Harshith Shetty',
       date: '24 Mar 2021',
     ),
     Post(
-      image: 'assets/blogs/minimal.jpg',
-      title: 'How Minimalism Brought Me',
-      author: 'John Johny',
+      image: 'assets/blogs/os.png',
+      title: 'Operating System and Computer System you need to know about',
+      author: 'Rutuja Khumbhar',
+      date: '10 Mar 2021',
+    ),
+    Post(
+      image: 'assets/blogs/web_dev.png',
+      title: 'How to become a Web Developer?',
+      author: 'Aayush Joshi',
       date: '15 Mar 2021',
     ),
     Post(
-      image: 'assets/blogs/colors.png',
-      title: 'The Most Important Color In UI Design',
-      author: 'John Johny',
+      image: 'assets/blogs/what_is_c.png',
+      title: 'What is C-Programming',
+      author: 'Akshat Mehta',
       date: '11 Mar 2021',
     ),
+
   ];
 
   @override
@@ -50,7 +57,7 @@ class Blogs_dash extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         title: Text(
-          'Daily Prompt',
+          'Sarvakaraum Blogs',
           style: TextStyle(
             color: Colors.black,
             fontSize: 26,
@@ -60,7 +67,7 @@ class Blogs_dash extends StatelessWidget {
         actions: [
           InkWell(
             child: CircleAvatar(
-              backgroundImage: AssetImage('assets/blog/profile.jpg'),
+              backgroundImage: AssetImage('assets/images/users.png'),
             ),
           ),
           Padding(
@@ -156,59 +163,7 @@ class Blogs_dash extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
-                  'Writing Contest',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                  ),
-                  textAlign: TextAlign.left,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  height: 80,
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        width: 130,
-                        padding: const EdgeInsets.symmetric(horizontal: 4),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'assets/blogs/writing_1.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: 130,
-                        padding: const EdgeInsets.symmetric(horizontal: 4),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'assets/blogs/writing_2.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                      Container(
-                        width: 130,
-                        padding: const EdgeInsets.symmetric(horizontal: 4),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(8),
-                          child: Image.asset(
-                            'assets/blogs/writing_3.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                )
+
               ],
             ),
           ],

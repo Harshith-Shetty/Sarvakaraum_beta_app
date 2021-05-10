@@ -15,7 +15,7 @@ class _GridDashboardState extends State<GridDashboard> {
       title: "Courses",
       subtitle: "Learn with us",
       event: "3 Course",
-      img: "assets/calendar.png",
+      img: "assets/course_classroom-removebg-preview.png",
       textf: "calendar",
       functioning : "Course_dash",
   );
@@ -24,30 +24,30 @@ class _GridDashboardState extends State<GridDashboard> {
     title: "Compiler",
     subtitle: "Edit, Compile and run programs",
     event: "4 Items",
-    img: "assets/food.png",
+    img: "assets/compiler-removebg-preview.png",
     textf: "food",
     functioning : "Compiler_dash",
   );
 
   Items item3 = new Items(
     title: "Documentation",
-    subtitle: "Lucy Mao going to Office",
+    subtitle: "Read and Learn",
     event: "",
-    img: "assets/map.png",
+    img: "assets/documentation-removebg-preview.png",
     textf: "map",
     functioning : "Docs_dash",
   );
 
   Items item4 = new Items(
     title: "Blogs",
-    subtitle: "Rose favirited your Post",
+    subtitle: "Get updates",
     event: "",
-    img: "assets/festival.png",
+    img: "assets/blog-removebg-preview.png",
     textf: "festival",
     functioning : "Blogs_dash",
   );
 
-  Items item5 = new Items(
+  /*Items item5 = new Items(
     title: "Workshop",
     subtitle: "Homework, Design",
     event: "4 Items",
@@ -56,30 +56,30 @@ class _GridDashboardState extends State<GridDashboard> {
     functioning: "Workshop_dash",
   );
 
-  Items item6 = new Items(
+  Items item5 = new Items(
     title: "Settings",
     subtitle: "",
     event: "2 Items",
     img: "assets/setting.png",
     textf: "setting",
     functioning : "Settings_dash",
-  );
+  );*/
 
   @override
   Widget build(BuildContext context) {
-    List<Items> myList = [item1, item2, item3, item4, item5, item6];
-    var color = 0xff453658;
+    List<Items> myList = [item1, item2, item3, item4];
+    var color = 0xffffffff;
     return Flexible(
       child: GridView.count(
           childAspectRatio: 1.0,
           padding: EdgeInsets.only(left: 16, right: 16),
           crossAxisCount: 2,
           crossAxisSpacing: 18,
-          mainAxisSpacing: 18,
+          mainAxisSpacing: 20,
           children: myList.map((data) {
             return Container(
               decoration: BoxDecoration(
-                  color: Color(color), borderRadius: BorderRadius.circular(10)),
+                  color: Color(color), borderRadius: BorderRadius.circular(15), ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -88,16 +88,12 @@ class _GridDashboardState extends State<GridDashboard> {
                     width: 42,
 
                   ),*/
+                  SizedBox(
+                    height: 5,
+                  ),
                   Material(
                       child: InkWell(
-                        /*onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Home_screen(),   //Material button function
-                            ),
-                          );
-                        },*/
+
                         onTap: () {
                           if (data.functioning == "Course_dash") {
                             Navigator.push(
@@ -149,15 +145,17 @@ class _GridDashboardState extends State<GridDashboard> {
                           } //elseif */
                         },
                         child: Container(
+
                           child: ClipRRect(
+
                             //borderRadius: BorderRadius.circular(20.0),
                             child: Image.asset(data.img,
-                            width: 42,)
+                            width: 100,)
                           ),),
                       )
                   ),
                   SizedBox(
-                    height: 14,
+                    height: 10,
                   ),
                   Text(
                     data.title,
@@ -168,18 +166,18 @@ class _GridDashboardState extends State<GridDashboard> {
                             fontWeight: FontWeight.w600)),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 4,
                   ),
                   Text(
                     data.subtitle,
                     style: GoogleFonts.openSans(
                         textStyle: TextStyle(
-                            color: Colors.white38,
+                            color: Colors.teal,
                             fontSize: 10,
                             fontWeight: FontWeight.w600)),
                   ),
                   SizedBox(
-                    height: 14,
+                    height: 10,
                   ),
                   Text(
                     data.event,

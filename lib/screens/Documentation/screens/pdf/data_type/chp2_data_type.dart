@@ -54,7 +54,7 @@ class _HomePage extends State<data_type_chp2> {
         ],
       ),
       body: SfPdfViewer.network(
-        'https://sarvakaraum.s3.amazonaws.com/Books/C/Data+Types/chp2_Primary_Data_Types.pdf',
+        'https://sarvakaraum.s3.amazonaws.com/Books/ENGLISH/Data+Types/(Data+Types)chp2_Primary+Data+Types.pdf',
         key: _pdfViewerKey,
       ),
     );

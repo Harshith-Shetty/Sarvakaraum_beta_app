@@ -139,7 +139,7 @@ class PostDetailsPage extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 16,
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
+                    backgroundImage: AssetImage('assets/images/users.png'),
                   ),
                   const SizedBox(
                     width: 8,
@@ -169,7 +169,7 @@ class PostDetailsPage extends StatelessWidget {
                         size: 18,
                       ),
                       Text(
-                        '6.5K Views',
+                        '6 Views',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 14,
@@ -188,7 +188,7 @@ class PostDetailsPage extends StatelessWidget {
                         size: 18,
                       ),
                       Text(
-                        '106 Likes',
+                        '1 Likes',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 14,
@@ -207,7 +207,7 @@ class PostDetailsPage extends StatelessWidget {
                         size: 18,
                       ),
                       Text(
-                        '55 Saves',
+                        '5 Saves',
                         style: TextStyle(
                           color: Colors.grey,
                           fontSize: 14,
@@ -234,12 +234,12 @@ class PostDetailsPage extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                        text: 'A',
+                        text: '',
                         style: GoogleFonts.notoSerif(
                             color: Colors.black, fontSize: 32)),
                     TextSpan(
                       text:
-                          ' contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.',
+                          ' Programming is a skilled task; it can be stated art professionally to write a code with minimum memory utilization. It is not just a typing job. It involves knowledge and the sequential approach of development. Let us understand the program development life cycle. We need to consider the following steps: 1. Understand the Problem Programmers have to know about the user’s requirements before typing anything because a program or software is going to be used by that user or users. First, we need to think about what kind of output has to produce. Then we can plan for what kind of inputs will be required to generate the output. Some documentation can help in this, such as original requests for the program from users, sample output, and descriptions of the data items available for input. Still the Understanding the problem is a challenging task. 2. Prepare the Logic Preparing the logic is the prime activity of the program development cycle. Its prerequisite is to have analytical skills. Whatever information is gathered from the user, we need to analyze it and prepare a scenario. Here we have to start planning the steps for writing the code and finalize the sequence of the steps. For this, we can use flowcharts or pseudocode. Planning a program is also referred to as “developing an algorithm’ An algorithm is the sequence of steps or rules we follow to solve a problem. In this step, the programmer needs to think carefully about all the possible data values a Program might encounter and how we want the program to handle each scenario. 3. Write a Code In this step, first, we need to decide which programming language to be used. Despite their differences, programming languages are quite similar in their basic capabilities. After choosing a language, the programmer must be concerned about using the correct syntax. 4. Use Software (a compiler or interpreter) Programming languages use human-understandable language such as English. After writing code, it needs to be converted in machine language as the computer knows only machine language, which consists of Is and Os. To achieve this, we use a translator program (a compiler or interpreter) that converts high-level programming language into the low-level machine language that the computer understands. This software also helps programmers by notifying for incorrect syntax, which is referred to as error messages. 5. Test the Program Sometimes an error-free program may have logical errors. A logical error results after using a syntactic correct statement; however, use the incorrect one for this context. So the programmer has to execute the program and provide some sample data to see whether the results are logically correct. The process of finding and correcting program errors is called debugging. 6. Put the Program into Production Putting the program into production is simply executing the program to make sure that it is working as per the requirement. Users also to be trained to understand that how to use the program to generate output. 7. Maintain the Program. After programs square measure place into production, creating necessary changes is termed maintenance. Changes may occur because of changes in government rule for taxes or maybe as per the user’s requirement.',
                       style: GoogleFonts.notoSerif(
                         color: Colors.black,
                         fontSize: 18,

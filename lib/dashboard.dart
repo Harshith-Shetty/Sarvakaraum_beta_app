@@ -34,7 +34,7 @@ class dashboard_State extends State<dashboard> {
               },
             )
           ],
-          backgroundColor: Color(0xff155a02),
+          backgroundColor: Color(0xffddd0cb),
           title: Text("Sarvakaraum", style: TextStyle(color: Colors.black87))
       ),
       /*drawer: new Drawer(
@@ -85,7 +85,7 @@ class dashboard_State extends State<dashboard> {
           ],
         ),
       ),*/
-      backgroundColor: Color(0xff2e5100),
+      backgroundColor: Color(0xffddd0cb),
       body: Column(
         children: <Widget>[
           SizedBox(
@@ -126,7 +126,7 @@ class dashboard_State extends State<dashboard> {
             ),
           ),
           SizedBox(
-            height: 40,
+            height: 45,
           ),
           GridDashboard()
 

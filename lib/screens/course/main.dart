@@ -29,7 +29,7 @@ class Course_dash extends StatelessWidget {
   // @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xfffffee4),
+      backgroundColor: Color(0xff030303),
       body: Padding(
         padding: EdgeInsets.only(left: 20, top: 50, right: 20),
         child: Column(

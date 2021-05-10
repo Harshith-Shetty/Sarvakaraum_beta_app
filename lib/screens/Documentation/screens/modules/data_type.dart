@@ -2,6 +2,7 @@ import 'package:sarvakaraum/screens/Documentation/consttants.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/chp1_data_type.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/chp2_data_type.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/chp3_data_type.dart';
+import 'package:sarvakaraum/screens/Documentation/screens/pdf/data_type/data_type_full.dart';
 import 'package:sarvakaraum/screens/Documentation/widgets/book_rating.dart';
 import 'package:sarvakaraum/screens/Documentation/screens/variable.dart';
 import 'package:sarvakaraum/screens/Documentation/widgets/rounded_button.dart';
@@ -43,8 +44,9 @@ class data_type extends StatelessWidget {
                       ChapterCard(
                         name: "Basic Data Types",
                         chapterNumber: 1,
-                        tag: "InBuilt Data Types",
+                        tag: "",
                         press: () {
+
 
                         },
                       ),
@@ -149,7 +151,7 @@ class data_type extends StatelessWidget {
                         top: 0,
                         right: 0,
                         child: Image.asset(
-                          "assets/images/book-3.png",
+                          "assets/Books/Pointers and data struc (resized).png",
                           width: 150,
                           fit: BoxFit.fitWidth,
                         ),
@@ -326,7 +328,16 @@ class BookInfo extends StatelessWidget {
                               borderRadius: BorderRadius.circular(30),
                             ),
                             child: FlatButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => data_type_full(),
+                                    //return data_type_full();
+
+                                  ),
+                                );
+                              },
                               child: Text("Read", style: TextStyle(fontWeight: FontWeight.bold),),
                             ),
                           )
@@ -351,7 +362,7 @@ class BookInfo extends StatelessWidget {
               child: Container(
                 color: Colors.transparent,
                 child: Image.asset(
-                  "assets/images/book-1.png",
+                  "assets/Books/Data Type (resized).png",
                   height: double.infinity,
                   alignment: Alignment.topRight,
                   fit: BoxFit.fitWidth,
